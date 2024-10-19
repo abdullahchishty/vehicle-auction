@@ -1,0 +1,211 @@
+form {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  height: 100%;
+
+  @include breakpoint($medium-screen) {
+    height: unset;
+    justify-content: unset;
+  }
+
+  .auth-label {
+    color: $white-color;
+    font-family: $archivo-font;
+    font-size: $font-size-sm;
+    font-style: normal;
+    font-weight: $medium-font-weight;
+    line-height: normal;
+    margin-block: 10px 8px;
+
+    @include breakpoint($medium-screen) {
+      font-size: $font-size-base;
+      margin-block: 25px 15px;
+    }
+  }
+  .auth__form-error-message {
+    color: $error-color;
+    font-family: $archivo-font;
+    font-size: $font-size-sm;
+    font-style: $font-style-normal;
+    font-weight: $extra-light-font-weight;
+    line-height: normal;
+    text-align: center;
+    margin-left: 10px;
+  }
+
+  .auth-input-field {
+    margin-bottom: 10px;
+    background-color: $black-color;
+    border: 1px solid $white-color;
+    color: $white-color;
+    border-radius: 6px;
+    border: 1px solid $white-color;
+    padding: 18px 15px;
+    -webkit-text-stroke-width: 1;
+    -webkit-text-stroke-color: $white-color;
+    font-family: $archivo-font;
+    font-size: $font-size-sm;
+    font-style: $font-style-normal;
+    font-weight: $normal-font-weight;
+    line-height: normal;
+    transition: all 0.3s ease;
+
+    &:focus {
+      background-color: $white-color;
+      color: $input-field-text-color;
+    }
+
+    @include breakpoint($medium-screen) {
+      font-size: $font-size-base;
+      padding: 23px 25px;
+      margin-bottom: 20px;
+    }
+  }
+  .options {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 15px;
+
+    @include breakpoint($medium-screen) {
+      margin-bottom: 30px;
+    }
+    .auth__form-remember-me {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      height: fit-content;
+
+      .remember-me {
+        height: 15px;
+
+        @include breakpoint($medium-screen) {
+          height: 28px;
+        }
+      }
+      .auth__form-remember-me-checkbox {
+        margin-right: 5px;
+        appearance: none;
+        -webkit-appearance: none;
+        width: 15px;
+        height: 15px;
+        border: 2px solid $white-color;
+        border-radius: 4px;
+        background-color: $black-color;
+        outline: none;
+        cursor: pointer;
+        transition: background-color 0.3s ease;
+
+        &:checked {
+          background-color: $white-color;
+          border-color: $white-color;
+          &::after {
+            content: "";
+            display: block;
+            width: 6px;
+            height: 10px;
+            border: solid $black-color;
+            border-width: 0 2px 2px 0;
+            transform: rotate(45deg);
+            margin: 1px 4px;
+          }
+        }
+
+        &:hover {
+          background-color: $hover-color;
+        }
+
+        @include breakpoint($medium-screen) {
+          width: 20px;
+          height: 20px;
+          margin-right: 10px;
+        }
+      }
+    }
+
+    .forgot-password,
+    .resend-password {
+      color: $white-color;
+      text-decoration: none;
+      font-size: $font-size-sm;
+      font-weight: $medium-font-weight;
+      line-height: normal;
+      font-family: $archivo-font;
+
+      &:hover {
+        text-decoration: underline;
+      }
+
+      @include breakpoint($medium-screen) {
+        font-size: $font-size-base;
+      }
+    }
+
+    .resend-password {
+      width: 100%;
+      text-align: right;
+    }
+  }
+  .auth-submit-button {
+    padding: 16px;
+    background-color: $white-color;
+    border: none;
+    cursor: pointer;
+    border-radius: 6px;
+
+    color: $secondary-color;
+    text-align: center;
+    font-family: $archivo-font;
+    font-size: $font-size-sm;
+    font-style: normal;
+    font-weight: $bold-font-weight;
+    line-height: normal;
+    transition: background-color 0.3s ease;
+
+    &:hover {
+      background-color: $hover-color;
+    }
+
+    @include breakpoint($medium-screen) {
+      padding: 24px;
+      font-size: $font-size-base;
+    }
+  }
+  .loading-button {
+    padding: 2px;
+    display: flex;
+    justify-content: center;
+  }
+  .sign-up {
+    text-align: center;
+    margin-top: 15px;
+    font-size: $font-size-sm;
+    font-weight: $medium-font-weight;
+    line-height: normal;
+    font-family: $archivo-font;
+    color: $white-color;
+
+    .auth__form-sign-up-button {
+      color: $white-color;
+      text-decoration: none;
+      font-size: $font-size-sm;
+      font-weight: $medium-font-weight;
+      line-height: normal;
+      font-family: $archivo-font;
+
+      &:hover {
+        text-decoration: underline;
+      }
+
+      @include breakpoint($medium-screen) {
+        font-size: $font-size-base;
+      }
+    }
+
+    @include breakpoint($medium-screen) {
+      margin-top: 20px;
+      font-size: $font-size-base;
+    }
+  }
+}

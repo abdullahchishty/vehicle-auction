@@ -1,0 +1,25 @@
+.dropdown-container {
+  position: relative;
+
+  &__menu {
+    position: fixed;
+    background-color: $white-color;
+    border: 1px solid $border-color-secondary;
+    border-radius: 4px;
+    z-index: 10;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  }
+
+  &__button {
+    display: block;
+    width: 100%;
+    padding: 10px 15px;
+    border: none;
+    background: none;
+    cursor: pointer;
+
+    &:hover {
+      background-color: $hover-color;
+    }
+  }
+}

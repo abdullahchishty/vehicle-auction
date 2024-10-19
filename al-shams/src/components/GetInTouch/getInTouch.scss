@@ -1,0 +1,100 @@
+.get-in-touch {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: start;
+  gap: 20px;
+
+  &__tagline {
+    text-align: start;
+    color: $tertiary-text-color;
+    font-family: $dm-sans-font;
+    font-size: $filter-font-size;
+    font-style: $font-style-normal;
+    font-weight: $normal-font-weight;
+    line-height: 27.75px;
+  }
+
+  &__form {
+    width: 100%;
+    gap: 20px;
+    flex-wrap: wrap;
+    @include breakpoint($small-screen) {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+    }
+    &__container {
+      display: flex;
+      flex-direction: column;
+      align-items: start;
+      border-radius: 12px;
+      border: 1px solid $dropdown-hover-bg-color;
+      padding: 4px 15px;
+      background: $body-bg;
+
+      &__label {
+        color: $label-light-color;
+        font-family: $archivo-font;
+        font-size: $font-size-sm;
+        font-style: $font-style-normal;
+        font-weight: $normal-font-weight;
+        line-height: 24.05px;
+      }
+      .required {
+        &::after {
+          content: "*";
+        }
+      }
+
+      &__input {
+        width: 100%;
+        border: none;
+
+        color: $tertiary-text-color;
+        font-family: $archivo-font;
+        font-size: $filter-font-size;
+        font-style: $font-style-normal;
+        font-weight: $normal-font-weight;
+        line-height: normal;
+
+        &::placeholder {
+          color: $label-light-color;
+        }
+
+        &:focus {
+          outline: none;
+          border: none;
+        }
+      }
+    }
+
+    &__textarea {
+      width: 100%;
+      grid-column: span 2;
+
+      border-radius: 12px;
+      border: 1px solid $dropdown-hover-bg-color;
+      background: $body-bg;
+
+      padding: 4px 15px;
+      font-family: $archivo-font;
+      font-size: $font-size-sm;
+      font-style: normal;
+      font-weight: $normal-font-weight;
+      line-height: 24.05px;
+      resize: none;
+
+      &::placeholder {
+        color: $label-light-color;
+      }
+    }
+
+    &__submit {
+      text-decoration: none;
+      font-size: $font-size-base;
+      font-weight: $medium-font-weight;
+      line-height: 27.75px;
+      height: 57px;
+    }
+  }
+}

@@ -1,0 +1,15 @@
+.about-mission__heading {
+  color: $black-color;
+  text-align: center;
+  font-family: $archivo-font;
+  font-size: $headings-font-size-lg;
+  font-style: $font-style-normal;
+  font-weight: $bold-font-weight;
+  line-height: 44px;
+  max-width: 1103px;
+
+  @include breakpoint($small-screen) {
+    font-size: $headings-font-size-xl;
+    line-height: 48px;
+  }
+}

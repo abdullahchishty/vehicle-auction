@@ -1,0 +1,44 @@
+.vehicle-categories {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  margin-block: 35px;
+
+  .vehicle-categories__container {
+    max-width: 1200px;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 20px;
+
+    &__heading {
+      text-align: center;
+    }
+
+    &__tagline {
+      text-align: center;
+    }
+    &__category-wrapper {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 30px;
+    }
+  }
+  .desktop-categories-container {
+    display: none;
+    @include breakpoint($medium-screen) {
+      display: flex;
+    }
+  }
+  .mobile-categories-container {
+    display: block;
+    @include breakpoint($medium-screen) {
+      display: none;
+    }
+  }
+}

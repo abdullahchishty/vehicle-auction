@@ -1,0 +1,83 @@
+.image-gallery {
+  display: flex;
+  flex-direction: column;
+  align-items: start;
+
+  width: 100%;
+
+  &__main-section {
+    position: relative;
+    background-color: black;
+    height: 487px;
+    width: 100%;
+    border-radius: 7px;
+
+    &__image {
+      width: 100%;
+      border-radius: 7px;
+      object-fit: contain;
+      height: 487px;
+    }
+
+    &__badge {
+      position: absolute;
+      top: 20px;
+      left: 15px;
+
+      display: flex;
+      width: 69.824px;
+      height: 23.437px;
+      padding: 0.824px 11.463px 2.305px 11.762px;
+      justify-content: center;
+      align-items: center;
+      flex-shrink: 0;
+
+      border-radius: 23.523px;
+      background: $blue-color;
+
+      color: $white-color;
+      font-family: $archivo-font;
+      font-size: $font-size-xxs;
+      font-style: $font-style-normal;
+      font-weight: $medium-font-weight;
+      line-height: 20.308px;
+      text-transform: capitalize;
+    }
+  }
+
+  &__thumbnail-container {
+    display: flex;
+    flex-wrap: wrap;
+    margin-top: 20px;
+    max-width: 800px;
+
+    &__thumbnail {
+      width: 90px;
+      height: 80px;
+      margin-right: 5px;
+      margin-bottom: 5px;
+      border-radius: 5px;
+      cursor: pointer;
+      transition: border 0.3s;
+      object-fit: cover;
+
+      @include breakpoint($medium-screen) {
+        margin-right: 10px;
+        margin-bottom: 10px;
+        border-radius: 10px;
+      }
+
+      &.active {
+        border: 2px solid $blue-color;
+      }
+
+      &:hover {
+        border: 2px solid $blue-color;
+      }
+    }
+  }
+}
+.no-image-container {
+  background-image: url("../../assets/images/placeholder.webp");
+  background-size: cover;
+}

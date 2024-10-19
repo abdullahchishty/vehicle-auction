@@ -1,0 +1,253 @@
+.filter-group {
+  position: absolute;
+  width: 100%;
+  left: 0;
+  background: $body-bg;
+  z-index: 100;
+
+  &__heading {
+    width: 100%;
+    display: none;
+    padding: 11px 10.396px 10.396px 11.919px;
+    align-items: center;
+
+    background: $black-color;
+
+    color: $white-color;
+    font-family: $archivo-font;
+    font-size: $font-size-sm;
+    font-style: $font-style-normal;
+    font-weight: $bold-font-weight;
+    line-height: 23.779px;
+    letter-spacing: 0.026px;
+    text-transform: uppercase;
+
+    @include breakpoint($medium-screen) {
+      display: flex;
+    }
+  }
+
+  &__section {
+    margin-bottom: 16px;
+    width: 95%;
+
+    &__input {
+      padding: 21.617px 21.617px;
+
+      width: 100%;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 10px;
+      input {
+        width: 100%;
+      }
+
+      &__field {
+        display: inline-flex;
+        padding: 8.298px 6.485px 8.128px 6.485px;
+        align-items: center;
+        border-radius: 2.162px;
+        border: 1.081px solid $border-color-secondary;
+        background: $white-color;
+        color: $hint-color;
+        font-family: $archivo-font;
+        font-size: $filter-font-size;
+        font-style: $font-style-normal;
+        font-weight: $normal-font-weight;
+        line-height: normal;
+      }
+    }
+
+    &__heading {
+      color: $secondary-heading-color;
+      font-family: $archivo-font;
+      font-size: $font-size-xs;
+      font-style: $font-style-normal;
+      font-weight: $bold-font-weight;
+      line-height: 23.779px;
+      letter-spacing: 0.026px;
+      text-transform: uppercase;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 11.047px 11.617px;
+
+      border-block: 1px solid $tertiary-border-color;
+    }
+
+    &__title {
+      cursor: pointer;
+      user-select: none;
+      font-size: $font-size-xs;
+
+      @include breakpoint($medium-screen) {
+        font-size: $font-size-xxs;
+      }
+
+      @include breakpoint($large-screen) {
+        font-size: $font-size-xs;
+      }
+    }
+
+    &__options {
+      overflow: auto;
+      display: block;
+      max-height: 500px;
+      width: 100%;
+      padding: 21.617px 21.617px;
+
+      &__option {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+
+        &__label {
+          color: $filter-text-color;
+          font-family: $archivo-font;
+          font-size: $font-size-sm;
+          font-style: $font-style-normal;
+          font-weight: $normal-font-weight;
+          line-height: 18.526px;
+        }
+
+        &__count {
+          color: $light-text-color;
+          text-align: center;
+          font-family: $lato-font;
+          font-size: $font-size-xxs;
+          font-style: $font-style-normal;
+          font-weight: $normal-font-weight;
+          line-height: 16.213px;
+        }
+        &__label {
+          display: block;
+          margin-bottom: 5px;
+          font-size: 14px;
+
+          &__checkbox {
+            margin-right: 10px;
+          }
+        }
+      }
+    }
+  }
+  &__button {
+    display: flex;
+
+    padding: 5.945px 9.608px 7.025px 9.998px;
+    justify-content: center;
+    align-items: center;
+    flex-shrink: 0;
+    border-radius: 2.162px;
+    border: 1.081px solid $black-color;
+    background: $black-color;
+    color: $white-color;
+    text-align: center;
+    font-family: $lato-font;
+    font-size: $font-size-xs;
+    font-style: $font-style-normal;
+    font-weight: $normal-font-weight;
+    line-height: 19.455px;
+    text-transform: capitalize;
+
+    transition: background-color 0.3s ease;
+
+    &:hover {
+      background-color: $dark-button-hover-color;
+    }
+  }
+}
+
+.apply-filters {
+  width: 95%;
+
+  @include breakpoint($medium-screen) {
+    width: 100%;
+  }
+}
+
+// Styles for the filter toggle button
+.filter-toggle-button {
+  width: 120px;
+  right: 10px;
+  position: absolute;
+  background: $white-color;
+  background-color: $white-color;
+  padding: 6px 8px;
+  border-radius: 5px;
+  background: $white-color;
+  cursor: pointer;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-family: $archivo-font;
+  font-size: $font-size-sm;
+  font-weight: $medium-font-weight;
+  color: $light-text-color;
+  transition: border-color 0.3s ease;
+  text-transform: capitalize;
+  text-decoration: none;
+
+  border: 1px solid $border-color-secondary;
+
+  &::after {
+    content: "";
+    display: inline-block;
+    width: 15px;
+    height: 15px;
+    background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 24 24' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cg id='SVGRepo_bgCarrier' stroke-width='0'%3E%3C/g%3E%3Cg id='SVGRepo_tracerCarrier' stroke-linecap='round' stroke-linejoin='round'%3E%3C/g%3E%3Cg id='SVGRepo_iconCarrier'%3E%3Cpath fill-rule='evenodd' clip-rule='evenodd' d='M3 7C3 6.44772 3.44772 6 4 6H20C20.5523 6 21 6.44772 21 7C21 7.55228 20.5523 8 20 8H4C3.44772 8 3 7.55228 3 7ZM6 12C6 11.4477 6.44772 11 7 11H17C17.5523 11 18 11.4477 18 12C18 12.5523 17.5523 13 17 13H7C6.44772 13 6 12.5523 6 12ZM9 17C9 16.4477 9.44772 16 10 16H14C14.5523 16 15 16.4477 15 17C15 17.5523 14.5523 18 14 18H10C9.44772 18 9 17.5523 9 17Z' fill='%23000000'%3E%3C/path%3E%3C/g%3E%3C/svg%3E");
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-color: $white-color;
+    margin-left: 8px;
+  }
+}
+
+// Hide the filters form by default on mobile
+.filters-form {
+  display: block;
+  margin-top: 50px;
+  margin-left: 20px;
+
+  @include breakpoint($medium-screen) {
+    margin: unset;
+  }
+
+  &.show {
+    display: none;
+  }
+}
+
+// Apply mobile-specific styles
+@include breakpoint($medium-screen) {
+  .filter-toggle-button {
+    display: none;
+  }
+
+  .filter-group {
+    max-width: 250px;
+    width: 100%;
+    min-width: 178px;
+
+    @include breakpoint($large-screen) {
+      min-width: 250px;
+      max-width: unset;
+    }
+
+    position: unset;
+  }
+
+  .filter-group__section {
+    width: 100%;
+  }
+
+  .filters-form {
+    display: block;
+
+    &.show {
+      display: block;
+    }
+  }
+}

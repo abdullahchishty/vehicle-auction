@@ -1,0 +1,57 @@
+.admin-dashboard {
+  background-color: $white-color;
+  border-radius: 10px 0 0 0;
+  padding: 20px;
+  height: 100%;
+  width: 100%;
+
+  &__count-cards-row {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 30px;
+  }
+
+  &__count-card {
+    &__left-section {
+      display: flex;
+      flex-direction: column;
+
+      &__heading {
+        color: $black-color;
+      }
+
+      &__number {
+        color: $black-color;
+      }
+    }
+
+    &__right-section {
+      width: 40px;
+      height: 40px;
+
+      svg {
+        width: 100%;
+        height: 100%;
+      }
+    }
+  }
+
+  &__vehicles-component {
+    margin-top: 30px;
+  }
+  &__machinery-component {
+    margin-top: 30px;
+  }
+}
+.auction-class {
+  background-image: url("../../../assets/images/countAuctionVerification.svg");
+}
+.vehicle-class {
+  background-image: url("../../../assets/images/countVehicle.svg");
+}
+.machinery-class {
+  background-image: url("../../../assets/images/countMachinery.svg");
+}
+.shipment-class {
+  background-image: url("../../../assets/images/countShipments.svg");
+}

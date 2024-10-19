@@ -1,0 +1,59 @@
+.inline-filters {
+  width: fit-content;
+  display: flex;
+  gap: 20px;
+  justify-content: center;
+  align-items: center;
+
+  &__container {
+    display: flex;
+    gap: 10px;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+
+    @include breakpoint($medium-screen) {
+      gap: 15px;
+    }
+
+    .active {
+      color: $primary-text-color;
+
+      border-bottom: 1px solid $primary-text-color;
+      transition: color 0.3s ease, border-bottom-color 0.3s ease;
+    }
+
+    &__filter {
+      color: $light-text-color;
+      font-family: $archivo-font;
+      font-size: $font-size-xs;
+      font-style: $font-style-normal;
+      font-weight: $normal-font-weight;
+      line-height: 22.471px;
+      text-decoration: none;
+      border-bottom: 1px solid transparent;
+      transition: color 0.3s ease, border-bottom-color 0.3s ease;
+
+      @include breakpoint($medium-screen) {
+        font-size: $font-size-sm;
+      }
+
+      &:hover {
+        color: $dark-text-hover-color;
+      }
+    }
+  }
+
+  .desktop-filters {
+    display: none;
+    @include breakpoint($small-screen) {
+      display: flex;
+    }
+  }
+  .mobile-filters {
+    display: flex;
+    @include breakpoint($small-screen) {
+      display: none;
+    }
+  }
+}

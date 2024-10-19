@@ -1,0 +1,38 @@
+.contact-us {
+  margin-bottom: 0px !important;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  margin-block: 35px;
+  &__container {
+    max-width: 1200px;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: start;
+    padding: 0 20px;
+
+    @include breakpoint($medium-screen) {
+      gap: 20px;
+    }
+
+    &__get_in_touch {
+      display: grid;
+      grid-template-columns: 1fr;
+      gap: 20px;
+      margin-block: 35px;
+      margin-bottom: 0px;
+
+      &__right {
+        display: flex;
+        flex-direction: column;
+      }
+
+      @include breakpoint($medium-screen) {
+        grid-template-columns: 2fr 1fr;
+      }
+    }
+  }
+}

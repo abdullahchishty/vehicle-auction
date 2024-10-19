@@ -1,0 +1,41 @@
+.breadcrumb {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  font-size: $font-size-sm;
+  &-item {
+    margin-right: 5px;
+
+    &-last-page {
+      color: $black-color;
+      font-family: $archivo-font;
+      font-size: $font-size-sm;
+      font-style: $font-style-normal;
+      font-weight: $normal-font-weight;
+      line-height: 21.54px;
+    }
+
+    &-link {
+      text-decoration: none;
+      color: $light-text-color;
+      font-family: $dm-sans-font;
+      font-size: $font-size-sm;
+      font-style: $font-style-normal;
+      font-weight: $normal-font-weight;
+      line-height: 21.54px;
+      &:hover {
+        text-decoration: underline;
+      }
+    }
+    &-separator {
+      color: $black-color;
+      font-family: $dm-sans-font;
+      font-size: $font-size-xxs;
+      font-style: $font-style-normal;
+      font-weight: $normal-font-weight;
+      line-height: 10.867px;
+      margin: 0 4px;
+    }
+  }
+}

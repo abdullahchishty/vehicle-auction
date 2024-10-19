@@ -1,0 +1,98 @@
+.upload-photo-gallery {
+  display: flex;
+  flex-direction: column;
+  align-items: start;
+  width: 100%;
+  margin-top: 20px;
+  margin-bottom: 20px;
+
+  &__title {
+    font-family: $archivo-font;
+    font-size: $font-size-sm;
+    font-weight: $semi-bold-font-weight;
+    color: $heading-color;
+    margin-bottom: 10px;
+  }
+
+  &__upload-btn {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+    flex-direction: column;
+    width: 100%;
+    padding-top: 10px;
+    height: 180px;
+    border: 2px solid $border-color-secondary;
+    border-radius: 8px;
+    cursor: pointer;
+    text-align: center;
+    background-color: $white-color;
+    position: relative;
+    font-size: $font-size-sm;
+    font-family: $archivo-font;
+    color: $black-color;
+
+    .upload-icon {
+      width: 30px;
+      height: 24px;
+      background-image: url(../../assets/images/uploadIcon.svg);
+      background-size: contain;
+      background-repeat: no-repeat;
+      margin-right: 10px;
+    }
+
+    input[type="file"] {
+      display: none;
+    }
+  }
+  &__minimum-photos {
+    font-size: $font-size-sm;
+    color: $black-color;
+    font-weight: $normal-font-weight;
+    line-height: normal;
+    margin-bottom: 20px;
+  }
+  &__heading {
+    color: $black-color;
+    font-family: $archivo-font;
+    font-size: $font-size-sm;
+    font-weight: $bold-font-weight;
+  }
+
+  &__preview-row {
+    margin-top: 20px;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 15px;
+    width: 100%;
+  }
+  &__image {
+    width: 100%;
+    height: 100%;
+    border-radius: 8px;
+    object-fit: cover;
+  }
+  &__delete-btn {
+    position: absolute;
+    right: 1px;
+    background: rgba(0, 0, 0, 0.493);
+    color: white;
+    border: none;
+    border-radius: 50%;
+    width: 25px;
+    height: 25px;
+    cursor: pointer;
+    background-image: url("data:image/svg+xml,%3Csvg fill='%23ffffff' height='15px' width='15px' version='1.1' id='Layer_1' xmlns='http://www.w3.org/2000/svg' xmlns:xlink='http://www.w3.org/1999/xlink' viewBox='0 0 492 492' xml:space='preserve' stroke='%23ffffff'%3E%3Cg id='SVGRepo_bgCarrier' stroke-width='0'%3E%3C/g%3E%3Cg id='SVGRepo_tracerCarrier' stroke-linecap='round' stroke-linejoin='round'%3E%3C/g%3E%3Cg id='SVGRepo_iconCarrier'%3E%3Cg%3E%3Cg%3E%3Cpath d='M300.188,246L484.14,62.04c5.06-5.064,7.852-11.82,7.86-19.024c0-7.208-2.792-13.972-7.86-19.028L468.02,7.872 c-5.068-5.076-11.824-7.856-19.036-7.856c-7.2,0-13.956,2.78-19.024,7.856L246.008,191.82L62.048,7.872 c-5.06-5.076-11.82-7.856-19.028-7.856c-7.2,0-13.96,2.78-19.02,7.856L7.872,23.988c-10.496,10.496-10.496,27.568,0,38.052 L191.828,246L7.872,429.952c-5.064,5.072-7.852,11.828-7.852,19.032c0,7.204,2.788,13.96,7.852,19.028l16.124,16.116 c5.06,5.072,11.824,7.856,19.02,7.856c7.208,0,13.968-2.784,19.028-7.856l183.96-183.952l183.952,183.952 c5.068,5.072,11.824,7.856,19.024,7.856h0.008c7.204,0,13.96-2.784,19.028-7.856l16.12-16.116 c5.06-5.064,7.852-11.824,7.852-19.028c0-7.204-2.792-13.96-7.852-19.028L300.188,246z'%3E%3C/path%3E%3C/g%3E%3C/g%3E%3C/g%3E%3C/svg%3E");
+    background-repeat: no-repeat;
+    background-position: center;
+    &:hover {
+      background-color: red;
+    }
+  }
+  &__preview-item {
+    position: relative;
+    width: 150px;
+    height: 150px;
+  }
+}

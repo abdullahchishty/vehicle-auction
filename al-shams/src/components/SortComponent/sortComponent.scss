@@ -1,0 +1,47 @@
+.sort-component {
+  position: relative;
+  &__container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    &__select {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 0px;
+
+      &__label {
+        color: $black-color;
+        font-family: $archivo-font;
+        font-size: $font-size-xxs;
+        font-style: $font-style-normal;
+        font-weight: $normal-font-weight;
+        line-height: 28px;
+
+        @include breakpoint($medium-screen) {
+          font-size: $filter-font-size;
+        }
+      }
+      .custom-dropdown {
+        &__header {
+          color: $black-color;
+          font-family: $archivo-font;
+          font-size: $font-size-xxs;
+          font-style: $font-style-normal;
+          font-weight: $bold-font-weight;
+          line-height: 28px;
+          padding: 0 5px;
+
+          &::after {
+            all: unset;
+          }
+
+          @include breakpoint($medium-screen) {
+            font-size: $filter-font-size;
+          }
+        }
+      }
+    }
+  }
+}

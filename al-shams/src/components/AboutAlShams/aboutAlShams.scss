@@ -1,0 +1,112 @@
+.about-al-shams {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  width: 100%;
+  border-radius: 9.11px;
+  background-image: url("../../assets/images/aboutUsHero.svg");
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+
+  &__container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    gap: 10px;
+    padding: 40px 20px;
+    @include breakpoint($medium-screen) {
+      padding-block: 100px 60px;
+      gap: 20px;
+    }
+
+    &__heading {
+      color: $white-color;
+    }
+
+    &__tagline {
+      max-width: 952px;
+      color: $white-gray-color;
+      text-align: center;
+      font-family: $archivo-font;
+      font-size: $font-size-xs;
+      font-style: $font-style-normal;
+      font-weight: $normal-font-weight;
+      line-height: 24px;
+      text-transform: capitalize;
+
+      @include breakpoint($medium-screen) {
+        font-size: $font-size-lg;
+        line-height: 32px;
+      }
+    }
+
+    &__buttons {
+      display: flex;
+      justify-content: center;
+      flex-direction: column;
+      width: 100%;
+      align-items: center;
+      gap: 20px;
+
+      @include breakpoint($small-screen) {
+        flex-direction: row;
+      }
+
+      &__cta {
+        text-decoration: none;
+        display: flex;
+        width: 100%;
+        max-width: 182px;
+        min-width: max-content;
+        padding: 12px;
+        justify-content: center;
+        align-items: center;
+        gap: 10px;
+        border-radius: 9.11px;
+        border: 0.756px solid $white-color;
+        background: $white-color;
+
+        color: $tertiary-text-color;
+        text-align: center;
+        font-family: $archivo-font;
+        font-size: $font-size-xs;
+        font-style: normal;
+        font-weight: $medium-font-weight;
+        line-height: 11.333px;
+        transition: background-color 0.3s ease;
+
+        @include breakpoint($medium-screen) {
+          padding: 20px;
+          width: 172px;
+          font-size: $font-size-sm;
+        }
+
+        &::after {
+          content: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='11' height='11' viewBox='0 0 11 11' fill='none'%3E%3Cpath d='M10.6726 0.124268H4.20872C4.04631 0.124268 3.9149 0.255684 3.9149 0.418088C3.9149 0.580492 4.04631 0.711908 4.20872 0.711908H9.9633L0.475244 10.2C0.360465 10.3147 0.360465 10.5007 0.475244 10.6154C0.53262 10.6728 0.607818 10.7015 0.682987 10.7015C0.758157 10.7015 0.833327 10.6728 0.89073 10.6154L10.3788 1.12736V6.88194C10.3788 7.04435 10.5101 7.17576 10.6726 7.17576C10.835 7.17576 10.9664 7.04435 10.9664 6.88194V0.418088C10.9664 0.255684 10.8349 0.124268 10.6726 0.124268Z' fill='%23050B20'/%3E%3C/svg%3E");
+        }
+
+        &:hover {
+          background-color: $hover-color;
+        }
+      }
+      .transparent-cta {
+        background: $transparent-color;
+        border: 0.756px solid $white-color;
+        color: $white-color;
+
+        &::after {
+          content: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='12' height='11' viewBox='0 0 12 11' fill='none'%3E%3Cpath d='M11.1726 0.124268H4.70872C4.54631 0.124268 4.4149 0.255684 4.4149 0.418088C4.4149 0.580492 4.54631 0.711908 4.70872 0.711908H10.4633L0.975244 10.2C0.860465 10.3147 0.860465 10.5007 0.975244 10.6154C1.03262 10.6728 1.10782 10.7015 1.18299 10.7015C1.25816 10.7015 1.33333 10.6728 1.39073 10.6154L10.8788 1.12736V6.88194C10.8788 7.04435 11.0101 7.17576 11.1726 7.17576C11.335 7.17576 11.4664 7.04435 11.4664 6.88194V0.418088C11.4664 0.255684 11.3349 0.124268 11.1726 0.124268Z' fill='white'/%3E%3C/svg%3E");
+        }
+
+        &:hover {
+          background-color: $transparent-hover-color;
+        }
+      }
+    }
+  }
+}

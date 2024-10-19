@@ -1,0 +1,33 @@
+
+.add-new-vehicle{
+    height: 100%;
+    width: 100%;
+    padding: 20px;
+    background-color: $white-color;
+    border-radius: 10px 0 0 0;
+    &__buttons{
+        display: flex;
+        gap:10px ;
+        justify-content: flex-end;
+        &__submit{
+            background-color: $blue-color;
+            color: $white-color;
+            padding: 10px 20px;
+            border-radius: 6px;
+            font-family: $archivo-font;
+            font-size: $font-size-sm;
+            font-weight: $semi-bold-font-weight;
+            text-align: center;
+            cursor: pointer;
+            padding: 12px 22px 12px 23px;
+            max-width: 166px;
+        }
+        &__cancel{
+            border-radius: 6px;
+            border: 1px solid $black-color;
+            background-color: $white-color;
+            padding: 12px 60px 12px 60px;
+            max-width: 166px;
+        }
+}
+}

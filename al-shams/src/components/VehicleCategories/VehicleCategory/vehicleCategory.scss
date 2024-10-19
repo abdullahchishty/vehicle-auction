@@ -1,0 +1,35 @@
+.vehicle-category {
+  display: flex;
+  width: 255px;
+  padding: 10px 0px 15.948px 0px;
+  flex-direction: column;
+  align-items: center;
+  gap: 0.052px;
+  border-radius: 12.147px;
+  border: 0.759px solid $dropdown-hover-bg-color;
+  background: $body-bg;
+  text-decoration: none;
+  transition: all 0.3s ease;
+
+  @include breakpoint($medium-screen) {
+    padding: 14px 0px 19.948px 0px;
+  }
+
+  &__image {
+    width: 40px;
+    height: 40px;
+  }
+  &__text {
+    color: $tertiary-text-color;
+    text-align: center;
+    font-family: $archivo-font;
+    font-size: $font-size-sm;
+    font-style: $font-style-normal;
+    font-weight: $medium-font-weight;
+    line-height: 16.398px;
+  }
+
+  &:hover {
+    background: $hover-color;
+  }
+}

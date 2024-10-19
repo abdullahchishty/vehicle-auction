@@ -1,0 +1,31 @@
+.related-listings {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  align-items: start;
+  justify-content: start;
+  text-align: start;
+
+  &__heading {
+    color: $black-color;
+    font-family: $archivo-font;
+    font-size: $headings-font-size;
+    font-style: $font-style-normal;
+    font-weight: $bold-font-weight;
+    line-height: normal;
+  }
+
+  &__container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 20px;
+
+    @include breakpoint($small-screen) {
+      align-items: start;
+      flex-direction: row;
+      flex-wrap: wrap;
+      gap: 20px;
+    }
+  }
+}

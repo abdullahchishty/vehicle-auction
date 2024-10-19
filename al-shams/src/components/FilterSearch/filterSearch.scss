@@ -1,0 +1,160 @@
+.filter-search {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 20px;
+  max-width: 1200px;
+  width: 100%;
+  transform: translateY(-50%);
+  z-index: 100;
+  &__container {
+    width: 80%;
+    display: inline-flex;
+    height: 40px;
+    padding: 10px 9.98px 10px 5px;
+    align-items: center;
+    flex-shrink: 0;
+    border-radius: 80px;
+    background: $white-color;
+    box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25);
+
+    @include breakpoint($medium-screen) {
+      height: 75.75px;
+    }
+
+    &__select {
+      display: flex;
+      height: 100%;
+      padding: 4px;
+      align-items: center;
+      flex-shrink: 0;
+      width: 100%;
+      gap: 10px;
+
+      .filter-search__container__select__search-field {
+        height: 100%;
+        width: 100%;
+        padding: 0 20px;
+        line-height: 28px;
+        font-family: $dm-sans-font;
+        font-size: $filter-font-size;
+        font-weight: $normal-font-weight;
+        color: $black-color;
+        border: none;
+        background: none;
+        outline: none;
+
+        @include breakpoint($medium-screen) {
+          width: calc(100% - 200px);
+        }
+      }
+
+      .custom-dropdown {
+        position: relative;
+        width: 250px;
+        height: 100%;
+        display: none;
+
+        @include breakpoint($medium-screen) {
+          display: flex;
+        }
+
+        .filter-search__container__select__field {
+          padding: 0 20px;
+          line-height: 28px;
+          display: flex;
+          align-items: center;
+          justify-content: space-between;
+          cursor: pointer;
+          font-family: $dm-sans-font;
+          font-size: $filter-font-size;
+          font-weight: $normal-font-weight;
+          color: $black-color;
+          border: none;
+          background: none;
+          outline: none;
+          width: 100%;
+          height: 100%;
+
+          &::after {
+            content: "";
+            position: absolute;
+            top: 50%;
+            right: 10px;
+            transform: translateY(-50%);
+            height: 20px;
+            width: 20px;
+            background: url("data:image/svg+xml,%3Csvg viewBox='0 0 24 24' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cg id='SVGRepo_bgCarrier' stroke-width='0'%3E%3C/g%3E%3Cg id='SVGRepo_tracerCarrier' stroke-linecap='round' stroke-linejoin='round'%3E%3C/g%3E%3Cg id='SVGRepo_iconCarrier'%3E%3Cpath d='M17.9188 8.17969H11.6888H6.07877C5.11877 8.17969 4.63877 9.33969 5.31877 10.0197L10.4988 15.1997C11.3288 16.0297 12.6788 16.0297 13.5088 15.1997L15.4788 13.2297L18.6888 10.0197C19.3588 9.33969 18.8788 8.17969 17.9188 8.17969Z' fill='%23292D32'%3E%3C/path%3E%3C/g%3E%3C/svg%3E");
+            pointer-events: none;
+          }
+        }
+
+        .custom-options {
+          position: absolute;
+          top: 100%;
+          left: 0;
+          width: 100%;
+          background: $white-color;
+          border: 1px solid $border-color-secondary;
+          border-radius: 5px;
+          box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+          z-index: 1000000;
+          max-height: 200px;
+          overflow-y: auto;
+
+          .custom-option {
+            padding: 10px 20px;
+            line-height: 28px;
+            cursor: pointer;
+            background-color: $dropdown-bg-color;
+            transition: background-color 0.2s ease;
+            font-family: $dm-sans-font;
+            font-size: $filter-font-size;
+
+            &:hover {
+              background-color: $dropdown-hover-bg-color;
+            }
+          }
+        }
+      }
+
+      &__vertical-divider {
+        border-left: 1px solid $dropdown-hover-bg-color;
+        height: 100%;
+        display: none;
+
+        @include breakpoint($medium-screen) {
+          display: block;
+        }
+      }
+
+      &__icon {
+        width: 35px;
+        height: 35.75px;
+        padding: 16px 15.02px 15.75px 15.98px;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        border-radius: 60px;
+        border: 1px solid $black-color;
+        background: $black-color;
+        cursor: pointer;
+
+        img {
+          width: 18px;
+          height: 18px;
+        }
+
+        @include breakpoint($medium-screen) {
+          width: 55px;
+          height: 55.75px;
+          img {
+            width: 25px;
+            height: 25px;
+          }
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,95 @@
+.shipment-details-container {
+  max-width: 1200px;
+  margin: 40px;
+
+  &__parent {
+    display: flex;
+    justify-content: center;
+  }
+
+  &__header {
+    display: flex;
+    justify-content: space-between;
+    flex-direction: column;
+    text-align: center;
+    margin: 32px 0px;
+
+    &__heading {
+      color: $tertiary-text-color;
+      font-family: $archivo-font;
+      font-size: 31.049px;
+      font-style: $font-style-normal;
+      font-weight: $bold-font-weight;
+      line-height: 37.259px; /* 120% */
+    }
+
+    &__current-status {
+      color: $black-color;
+      font-family: $archivo-font;
+      font-size: $font-size-xl;
+      font-style: $font-style-normal;
+      font-weight: $normal-font-weight;
+      line-height: $normal-line-height;
+      margin-right: 10px;
+  
+      &__Arrived {
+        display: inline-block;
+        border-radius: 10px;
+        background: $sash-color;
+        width: 166px;
+        height: 48px;
+        line-height: 48px;
+        color: $white-color;
+        font-size: $font-size-xl;
+        text-align: center;
+      }
+    }
+
+    @include breakpoint($medium-screen) {
+      flex-direction: row;
+    }
+  }
+
+  &__timeline-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+    grid-template-rows: repeat(2, 263px);
+    gap: 30px;
+    margin-bottom: 60px;
+
+    &__box {
+      &__achieved {
+        border: 6px solid #3f873e;
+        background-color: #d5ffd5;
+        border-radius: 10px;
+        padding: 6px;
+      }
+
+      &__not-achieved {
+        border: 6px solid rgb(215 64 64);
+        background-color: #ffeaea;
+        border-radius: 10px;
+        padding: 6px;
+      }
+
+      &__image {
+        width: 100%;
+        height: 200px;
+        border-radius: 10px;
+        object-fit: cover;
+      }
+
+      &__text-container {
+        &__status {
+          font-weight: $bold-font-weight;
+          margin-right: 10px;
+        }
+      }
+
+      &__date-time-container {
+        display: flex;
+        justify-content: space-between;
+      }
+    }
+  }
+}

@@ -1,0 +1,41 @@
+.filter-explore-listings {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  margin-block: 35px;
+  .filter-explore-listings__container {
+    max-width: 1200px;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 20px;
+    padding: 0 20px;
+    &__topbar {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      width: 95%;
+      &__heading {
+        text-align: left;
+      }
+
+      &__tagline {
+        text-align: center;
+      }
+    }
+    &__products {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 20px;
+      justify-content: center;
+    }
+
+    &__button {
+      text-decoration: none;
+    }
+  }
+}

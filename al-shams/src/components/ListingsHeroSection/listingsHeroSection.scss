@@ -1,0 +1,65 @@
+.filter-hero-section {
+  background-image: url("../../assets/images/listings-hero.png");
+  background-size: cover;
+  background-position: center;
+  height: min(calc(100vh), 150px);
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+
+  @include breakpoint($medium-screen) {
+    height: min(calc(100vh), 196px);
+  }
+
+  @include breakpoint($large-screen) {
+    background-position: center;
+  }
+
+  &__container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    text-align: center;
+    padding: 0 20px;
+  }
+
+  &__subtitle {
+    color: $white-color;
+    text-align: center;
+    font-family: $archivo-font;
+    font-size: $font-size-xs;
+    font-style: $font-style-normal;
+    font-weight: $normal-font-weight;
+    line-height: 17.991px;
+
+    span {
+      color: $white-color;
+      font-family: $archivo-font;
+      font-size: $font-size-xs;
+      font-style: $font-style-normal;
+      font-weight: $medium-font-weight;
+      line-height: 17.991px;
+    }
+
+    @include breakpoint($medium-screen) {
+      font-size: $font-size-sm;
+    }
+  }
+
+  &__title {
+    color: $white-color;
+    text-align: center;
+    font-family: $archivo-font;
+    font-size: $headings-font-size;
+    font-style: $font-style-normal;
+    font-weight: $normal-font-weight;
+
+    @include breakpoint($medium-screen) {
+      font-size: $headings-font-size-lg;
+      line-height: 53.972px;
+    }
+  }
+}

@@ -1,0 +1,82 @@
+.vehicle-details-heading {
+  margin-bottom: 35px;
+}
+
+.vehicle-details-container {
+  display: flex;
+  flex-direction: column;
+  max-width: 800px;
+
+  &__left-section {
+    display: flex;
+    flex-direction: column;
+    margin-right: 0px;
+    max-width: 800px;
+
+    &>* {
+      margin-bottom: 35px;
+    }
+
+    &__paragraph {
+      overflow-wrap: break-word;
+      color: $tertiary-text-color;
+      font-family: $archivo-font;
+      font-size: 14px;
+      font-style: $font-style-normal;
+      font-weight: $normal-font-weight;
+      line-height: 20px;
+  }
+
+    &__vehicle-props-container {
+      display: flex;
+      margin-bottom: 0px !important;
+
+      &__key-container {
+        display: flex;
+        flex-direction: column;
+
+        & > * {
+          color: $tertiary-text-color;
+          font-family: $archivo-font;
+          font-size: 14px;
+          font-style: $font-style-normal;
+          font-weight: $normal-font-weight;
+          line-height: 21.54px;
+          height: 40px;
+        }
+      }
+
+      &__value-container {
+        display: flex;
+        flex-direction: column;
+
+        & > * {
+          color: $tertiary-text-color;
+          font-family: $archivo-font;
+          font-size: $font-size-sm;
+          font-style: $font-style-normal;
+          font-weight: $medium-font-weight;
+          line-height: 21.54px;
+          height: 40px;
+          overflow: hidden;
+        }
+      }
+    }
+
+    @include breakpoint($medium-screen) {
+      max-width: 600px;
+      margin-right: 20px;
+    }
+  }
+
+  @include breakpoint($large-screen) {
+    flex-direction: row;
+    max-width: none;
+  }
+}
+
+.my-overview-detail__container {
+  display: block;
+  padding: 0px;
+  margin-right: 50px;
+}

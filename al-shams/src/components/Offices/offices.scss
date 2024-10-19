@@ -1,0 +1,28 @@
+.offices {
+  display: flex;
+  flex-direction: column;
+  align-items: start;
+  justify-content: start;
+  text-align: start;
+  width: 100%;
+  padding: 4px;
+  margin: 20px 0px;
+
+  @include breakpoint($medium-screen) {
+    position: relative;
+    top: 35px;
+    margin: 0px;
+  }
+
+  &__container {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+
+    @include breakpoint($small-screen) {
+      flex-direction: row;
+      gap: 20px;
+    }
+  }
+}

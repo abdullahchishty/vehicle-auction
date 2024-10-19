@@ -1,0 +1,115 @@
+.bidding {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: start;
+  justify-content: start;
+  border-radius: 12.42px;
+  border: 0.776px solid $hover-color;
+
+  &__container {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: start;
+    justify-content: center;
+    gap: 10px;
+    padding: 24px;
+
+    @include breakpoint($medium-screen) {
+      gap: 20px;
+    }
+
+    &__heading {
+      color: $black-color;
+      font-family: $archivo-font;
+      font-size: $font-size-sm;
+      font-style: $font-style-normal;
+      font-weight: $normal-font-weight;
+      line-height: 12.42px;
+    }
+
+    &__pricing {
+      display: flex;
+      gap: 10px;
+      align-items: end;
+      justify-content: end;
+
+      &__main_price {
+        color: $black-color;
+        font-family: $archivo-font;
+        font-size: $font-size-xxl;
+        font-style: $font-style-normal;
+        font-weight: $bold-font-weight;
+        line-height: 23.287px;
+      }
+      &__discount {
+        color: $black-color;
+        font-family: $archivo-font;
+        font-size: $font-size-xs;
+        font-style: $font-style-normal;
+        font-weight: $normal-font-weight;
+        line-height: 23.287px;
+        text-decoration: line-through;
+      }
+    }
+    &__saving {
+      color: $tertiary-text-color;
+      font-family: $dm-sans-font;
+      font-size: $font-size-xs;
+      font-style: $font-style-normal;
+      font-weight: $normal-font-weight;
+      line-height: 21.54px;
+    }
+
+    &__button {
+      width: 100%;
+      display: flex;
+      justify-content: center;
+      gap: 10px;
+      flex-direction: column;
+
+      &__bid,
+      &__verify {
+        text-decoration: none;
+        width: 100%;
+        padding: 5.481px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-shrink: 0;
+        border-radius: 9.11px;
+
+        color: $white-color;
+        text-align: center;
+        font-family: $archivo-font;
+        font-size: $font-size-sm;
+        font-style: $font-style-normal;
+        font-weight: $medium-font-weight;
+        line-height: 21.54px;
+      }
+
+      &__bid {
+        border: 0.776px solid $primary-color;
+        background: $primary-color;
+
+        &::after {
+          content: "";
+          display: inline-block;
+          width: 11px;
+          height: 11px;
+          background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='11' height='12' viewBox='0 0 11 12' fill='none'%3E%3Cpath d='M10.5807 0.283447H3.93981C3.77295 0.283447 3.63794 0.418463 3.63794 0.585316C3.63794 0.752168 3.77295 0.887184 3.93981 0.887184H9.85201L0.104067 10.6351C-0.0138557 10.753 -0.0138557 10.9441 0.104067 11.062C0.163015 11.1209 0.240272 11.1504 0.317501 11.1504C0.394729 11.1504 0.471958 11.1209 0.530934 11.062L10.2788 1.31402V7.22622C10.2788 7.39308 10.4138 7.52809 10.5807 7.52809C10.7476 7.52809 10.8826 7.39308 10.8826 7.22622V0.585316C10.8826 0.418463 10.7475 0.283447 10.5807 0.283447Z' fill='white'/%3E%3C/svg%3E");
+          background-size: contain;
+          background-repeat: no-repeat;
+          background-position: center;
+          margin-left: 10px;
+        }
+      }
+
+      &__verify {
+        border: 0.776px solid $black-color;
+        background: $black-color;
+      }
+    }
+  }
+}

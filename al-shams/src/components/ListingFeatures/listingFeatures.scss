@@ -1,0 +1,30 @@
+.listing-features {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: start;
+  gap: 20px;
+
+  &__heading {
+    color: $tertiary-text-color;
+    font-family: $archivo-font;
+    font-size: $headings-font-size;
+    font-style: $font-style-normal;
+    font-weight: $bold-font-weight;
+    line-height: 20.182px;
+  }
+  &__container {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    gap: 20px;
+
+    @include breakpoint($small-screen) {
+      align-items: start;
+      flex-direction: row;
+      flex-wrap: wrap;
+      gap: 20px;
+    }
+  }
+}

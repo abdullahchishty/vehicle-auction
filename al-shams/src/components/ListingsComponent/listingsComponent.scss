@@ -1,0 +1,45 @@
+.listings-component {
+  width: 100%;
+  &__container {
+    display: flex;
+    flex-direction: column;
+    align-items: start;
+    justify-content: space-between;
+    width: 100%;
+
+    &__header {
+      display: flex;
+      justify-content: space-between;
+      align-items: start;
+      width: 100%;
+
+      &__multifilter {
+        display: block;
+
+        @include breakpoint($medium-screen) {
+          display: none;
+        }
+      }
+    }
+
+    &__listings {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      width: 100%;
+      gap: 20px;
+      margin-top: 20px;
+
+      @include breakpoint($medium-screen) {
+        justify-content: start;
+      }
+    }
+  }
+  &__loading {
+    display: flex;
+    width: 100%;
+    justify-content: center;
+    align-items: center;
+    height: 600px;
+  }
+}

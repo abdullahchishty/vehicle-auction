@@ -1,0 +1,45 @@
+.why-choose {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: start;
+  gap: 20px;
+  margin-block: 35px;
+  width: 100%;
+
+  &__tagline {
+    color: $light-text-color;
+    text-align: center;
+    font-family: $archivo-font;
+    font-size: $font-size-sm;
+    font-style: $font-style-normal;
+    font-weight: $normal-font-weight;
+    line-height: 20px;
+    max-width: 594px;
+  }
+
+  &__container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    width: 100%;
+
+    @include breakpoint($medium-screen) {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      column-gap: 20px;
+    }
+
+    @include breakpoint($large-screen) {
+      display: flex;
+      flex-direction: row;
+      justify-content: center;
+      flex-wrap: wrap;
+
+      .why-choose-feature {
+        max-width: 258px;
+      }
+    }
+  }
+}

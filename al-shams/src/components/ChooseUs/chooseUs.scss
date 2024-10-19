@@ -1,0 +1,61 @@
+.choose-us {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  margin-block: 35px;
+  background-color: $secondary-bg-color;
+  width: 100%;
+
+  &__container {
+    max-width: 1200px;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 20px;
+    padding: 55px 20px;
+
+    &__heading {
+      color: $secondary-text-color;
+    }
+
+    &__features {
+      display: flex;
+      flex-wrap: wrap;
+      align-items: center;
+      justify-content: center;
+    }
+    &__button {
+      text-decoration: none;
+      display: flex;
+      width: 100%;
+      padding: 17px 38px 16px 38px;
+      justify-content: center;
+      align-items: center;
+      flex-shrink: 0;
+      border-radius: 9.11px;
+      border: 0.759px solid $white-color;
+      background: $white-color;
+      color: $black-color;
+      text-align: center;
+      font-family: $archivo-font;
+      font-size: $font-size-sm;
+      font-style: $font-style-normal;
+      font-weight: $bold-font-weight;
+      line-height: normal;
+      margin: 0 20px;
+      transition: all 0.3s ease;
+
+      &:hover {
+        background: $hover-color;
+      }
+
+      @include breakpoint($medium-screen) {
+        width: unset;
+      }
+    }
+  }
+}

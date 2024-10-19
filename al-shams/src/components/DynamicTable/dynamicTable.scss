@@ -1,0 +1,118 @@
+.table-container {
+  width: 100%;
+  height: 100%;
+  overflow-x: auto;
+  background-color: $white-color;
+
+  &__header {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 10px;
+
+    &__heading {
+      color: $heading-color;
+      font-family: $archivo-font;
+      font-size: $headings-font-size;
+      font-style: $font-style-normal;
+      font-weight: $semi-bold-font-weight;
+      line-height: 24px;
+    }
+    &__button {
+      border-radius: 6px;
+      background: $blue-color;
+      padding: 7px 29px;
+      
+      color: $white-color;
+      text-align: right;
+      font-family: $archivo-font;
+      font-size: $font-size-sm;
+      font-style: $font-style-normal;
+      font-weight: $semi-bold-font-weight;
+      line-height: 24px;
+    }
+  }
+
+  &__table {
+    width: 100%;
+    border-collapse: collapse;
+  }
+
+  &__dynamic__header {
+    background: #f1f4f9;
+    
+    th {
+      color: $black-color;
+      font-family: $archivo-font;
+      font-size: 11.364px;
+      font-style: $font-style-normal;
+      font-weight: $bold-font-weight;
+      line-height: normal;
+      text-align: left;
+    }
+  }
+
+  &__dynamic__header__cell,
+  &__body__cell {
+    padding: 14px 10px;
+    border-bottom: 1px solid $border-color-secondary;
+    box-sizing: border-box;
+    flex-grow: 1;
+    flex-basis: 0;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    align-items: center;
+    max-width: 200px;
+    -webkit-overflow-scrolling: touch;
+  }
+
+  &__body__cell {
+    color: $black-color;
+    font-family: $archivo-font;
+    font-size: $font-size-xs;
+    font-style: $font-style-normal;
+    font-weight: $normal-font-weight;
+    word-break: break-all;
+    line-height: normal;
+
+    &:first-child {
+      font-weight: 700;
+    }
+
+    &__image {
+      width: 50px;
+      height: 50px;
+      border-radius: 50%;
+      object-fit: cover;
+    }
+  }
+
+  .three-dots {
+    cursor: pointer;
+  }
+
+  &__body__row {
+    &__status__active {
+      background-color: $active-status-color;
+      color: $white-color;
+      font-size: $font-size-xs;
+      padding: 4px 26px;
+      border-radius: 10px;
+      max-width: 76px;
+      width: 100%;
+      text-transform: capitalize;
+      display: inline-block;
+    }
+    &__status__inactive {
+      background-color: $inactive-color;
+      font-size: $font-size-xs;
+      color: $white-color;
+      padding: 4px 22px;
+      max-width: 76px;
+      width: 100%;
+      border-radius: 10px;
+      text-transform: capitalize;
+      display: inline-block;
+    }
+  }
+}

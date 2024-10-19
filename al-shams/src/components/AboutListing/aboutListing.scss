@@ -1,0 +1,31 @@
+.about-listing {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: start;
+  justify-content: start;
+  text-align: start;
+  gap: 10px;
+
+  @include breakpoint($medium-screen) {
+    gap: 20px;
+  }
+
+  &__heading {
+    color: $tertiary-text-color;
+    font-family: $archivo-font;
+    font-size: $headings-font-size;
+    font-style: $font-style-normal;
+    font-weight: $bold-font-weight;
+    line-height: 20.182px;
+  }
+
+  &__detail {
+    color: $tertiary-text-color;
+    font-family: $archivo-font;
+    font-size: $font-size-sm;
+    font-style: $font-style-normal;
+    font-weight: $normal-font-weight;
+    line-height: 21.54px;
+  }
+}

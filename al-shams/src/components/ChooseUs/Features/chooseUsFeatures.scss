@@ -1,0 +1,50 @@
+.choose-us-feature {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 20px 10px;
+  gap: 20px;
+  background-color: $secondary-bg-color;
+  border-radius: 10px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  transition: all 0.3s ease-in-out;
+  cursor: pointer;
+
+  @include breakpoint($medium-screen) {
+    padding: 20px;
+  }
+  &__container {
+    display: flex;
+    flex-direction: column;
+    align-items: start;
+    justify-content: center;
+    gap: 10px;
+    max-width: 100%;
+
+    @include breakpoint($medium-screen) {
+      max-width: 236px;
+    }
+
+    &__heading {
+      color: $secondary-text-color;
+      font-family: $archivo-font;
+      font-size: $headings-font-size-xs;
+      font-style: normal;
+      font-weight: $bold-font-weight;
+      line-height: normal;
+      margin-bottom: 10px;
+      text-align: left;
+    }
+
+    &__text {
+      color: $secondary-text-color;
+      font-family: $archivo-font;
+      font-size: $font-size-sm;
+      font-style: $font-style-normal;
+      font-weight: $normal-font-weight;
+      line-height: 18px;
+      text-align: left;
+    }
+  }
+}

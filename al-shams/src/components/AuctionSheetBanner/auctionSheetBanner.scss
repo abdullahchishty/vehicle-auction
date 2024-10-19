@@ -1,0 +1,42 @@
+.auction-sheet-verification-banner {
+  display: flex;
+  justify-content: center;
+  padding-bottom: 130px;
+  width: 1100px;
+  margin: 0px 40px;
+
+  &__container {
+    background-color: $container-light-bg-color;
+    display: flex;
+    justify-content: center;
+    height: 350px;
+  
+    @include breakpoint($large-screen) {
+      height: 492px;
+    }
+  }
+
+  @include breakpoint($large-screen) {
+    justify-content: space-between;
+  }
+
+  &__text {
+    align-content: center;
+    &__heading {
+      color: $black-color;
+      font-family: $archivo-font;
+      font-size: 34px;
+      font-style: $font-style-normal;
+      font-weight: $bold-font-weight;
+      line-height: $normal-line-height;
+    }
+  }
+
+  &__image {
+    display: none;
+    @include breakpoint($large-screen) {
+      display: inline;
+    }
+  }
+}
+

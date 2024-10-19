@@ -1,0 +1,200 @@
+.auth__container {
+  .auth__container-wrapper {
+    display: flex;
+    height: 100dvh;
+    background-color: $black-color;
+    .left-section {
+      background: url("../../../assets/images/auth-bg.png") no-repeat center
+        left;
+      background-size: cover;
+      flex: 1;
+      padding: 40px;
+      flex-direction: column;
+      justify-content: space-between;
+      align-items: center;
+      width: 100%;
+      display: none;
+
+      .left-section-wrapper {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+      }
+
+      .auth-heading {
+        font-family: $archivo-font;
+        color: $white-color;
+        font-size: 48px;
+        font-style: $font-style-normal;
+        font-weight: $bold-font-weight;
+        line-height: 125%;
+        letter-spacing: 0.2px;
+        max-width: 498px;
+        text-align: center;
+      }
+
+      .auth-subheading {
+        color: $light-text-color;
+        text-align: center;
+        font-family: $inter-font;
+        font-size: $font-size-sm;
+        font-style: $font-style-normal;
+        font-weight: $normal-font-weight;
+        max-width: 444px;
+        line-height: 160%;
+      }
+
+      .powered-by {
+        color: #fff;
+        font-family: $archivo-font;
+        font-size: $font-size-sm;
+        font-style: $font-style-normal;
+        font-weight: $semi-bold-font-weight;
+        line-height: normal;
+      }
+
+      @include breakpoint($large-screen) {
+        display: flex;
+      }
+    }
+
+    .right-section {
+      background-color: #000;
+      flex: 1;
+      height: 100dvh;
+      width: 100%;
+      padding: 40px 20px;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-evenly;
+
+      @include breakpoint($medium-screen) {
+        padding: 40px;
+        height: 100%;
+        overflow-y: scroll;
+      }
+      &::-webkit-scrollbar {
+        display: none;
+      }
+      .auth__navigation-wrapper {
+        display: flex;
+        justify-content: space-between;
+        align-items: start;
+        .back-button {
+          flex: 1;
+          color: $white-color;
+          text-decoration: none;
+          font-family: $archivo-font;
+          font-style: $font-style-normal;
+          font-weight: $semi-bold-font-weight;
+          line-height: normal;
+          font-size: $font-size-base;
+          display: none;
+          align-items: center;
+          cursor: pointer;
+
+          @include breakpoint($medium-screen) {
+            display: flex;
+          }
+
+          &::before {
+            content: "";
+            display: inline-block;
+            width: 20px;
+            height: 20px;
+            background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='20' height='20' viewBox='0 0 20 20' fill='none'%3E%3Cpath d='M14.8627 3.225L13.3794 1.75L5.1377 10L13.3877 18.25L14.8627 16.775L8.0877 10L14.8627 3.225Z' fill='white'/%3E%3C/svg%3E");
+            background-size: contain;
+            background-repeat: no-repeat;
+            background-position: center;
+            margin-right: 9px;
+          }
+        }
+
+        .logo {
+          flex: 1;
+          display: flex;
+          justify-content: center;
+          align-items: center;
+          img {
+            width: 150px;
+            height: 70px;
+            margin-bottom: 20px;
+            @include breakpoint($medium-screen) {
+              width: 206px;
+              height: 97px;
+              margin-bottom: 30px;
+            }
+            @include breakpoint($large-screen) {
+              margin-bottom: 70px;
+            }
+          }
+        }
+        .spacer {
+          @include breakpoint($medium-screen) {
+            flex: 1;
+          }
+        }
+      }
+
+      .auth__form-container {
+        max-width: 600px;
+        width: 100%;
+        margin: 0 auto;
+        .auth__form-heading {
+          color: $white-color;
+          font-family: $archivo-font;
+          font-size: $headings-font-size-sm;
+          font-weight: $bold-font-weight;
+          line-height: normal;
+          text-align: center;
+          margin-bottom: 10px;
+
+          @include breakpoint($medium-screen) {
+            font-size: $headings-font-size;
+            margin-bottom: 15px;
+          }
+
+          @include breakpoint($large-screen) {
+            font-size: $headings-font-size-lg;
+            margin-bottom: 20px;
+          }
+        }
+
+        .auth__form-subheading {
+          color: $light-text-color;
+          font-family: $archivo-font;
+          font-size: $font-size-xs;
+          font-weight: $normal-font-weight;
+          line-height: 20px;
+          text-align: center;
+          margin-bottom: 13px;
+
+          @include breakpoint($medium-screen) {
+            font-size: $font-size-sm;
+            margin-bottom: 23px;
+          }
+        }
+        .auth__form-horizontal-divider {
+          height: 1px;
+          background-color: $tertiary-color;
+          margin: 0 auto 15px;
+
+          @include breakpoint($medium-screen) {
+            margin: 0 auto 25px;
+          }
+        }
+      }
+    }
+
+    @include breakpoint($medium-screen) {
+      height: 100dvh;
+      overflow-y: scroll;
+    }
+  }
+}
+
+.powered-by-link {
+  text-decoration: none;
+  color: $white-color;
+}

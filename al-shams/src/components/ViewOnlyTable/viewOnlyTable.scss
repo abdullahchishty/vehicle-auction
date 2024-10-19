@@ -1,0 +1,105 @@
+.shipments-container {
+  max-width: 1250px;
+  min-height: 506px;
+  padding: 40px;
+  margin: auto;
+}
+
+.shipments-heading {
+  font-family: $archivo-font;
+  font-size: 24px;
+  font-style: $font-style-normal;
+  font-weight: 600;
+  line-height: 24px;
+}
+
+.view-only-table {
+  margin-top: 20px;
+  overflow: auto;
+  max-height: 1000px;
+
+  &__heading {
+    font-size: $font-size-xxl;
+    font-style: $font-style-normal;
+    font-weight: 600;
+    line-height: 24px; 
+    font-family: $archivo-font;
+    margin-top: 20px;
+  }
+
+  &__header {
+    display: flex;
+    border-radius: 3.247px;
+    background: #F1F4F9;
+    padding: 0px 10px;
+    min-width: 1170px;
+    color: #202224;
+
+    &__item {
+      flex-basis: 0;
+      color: #202224;
+      font-family: $archivo-font;
+      font-size: 11.364px;
+      font-style: $font-style-normal;
+      font-weight: $bold-font-weight;
+      line-height: $normal-line-height;
+      padding: 10px 3px;
+      display: flex;
+      align-items: center;
+
+      &__arrow__container {
+        margin-left: 5px;
+        border-radius: 5px;
+        display: flex;
+        &__box {
+          width: 10px;
+          height: 15px;
+          text-align: center;
+          &:hover {
+            cursor: pointer;
+          }
+          &:hover .view-only-table__header__item__arrow__container__box__img2 {
+            width: 12px;
+            position: relative;
+            top: -7px;
+          }
+          &:hover .view-only-table__header__item__arrow__container__box__img1 {
+            position: relative;
+            top: -4px;
+            width: 12px;
+          }
+          &__img1, &__img2 {
+            width: 5.5px;
+          }
+        }
+      }
+    }
+  }
+
+  &__body {
+    min-width: 1170px;
+    &__row {
+      padding: 0px 10px;
+      display: flex;
+
+      &__view {
+        &:hover {
+          cursor: pointer;
+          background-color: #ececec;
+        }
+      }
+
+      &__item {
+        flex-basis: 0;
+        color: #202224;
+        font-family: $archivo-font;
+        font-size: $font-size-xs;
+        font-style: $font-style-normal;
+        font-weight: $normal-font-weight;
+        line-height: $normal-line-height;
+        padding: 10px 3px;
+        border-bottom: 0.325px solid rgba(151, 151, 151, 0.4);
+      }
+    }
+  }
+}

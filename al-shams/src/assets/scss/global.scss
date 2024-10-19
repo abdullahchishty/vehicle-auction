@@ -1,0 +1,104 @@
+@import url("https://fonts.googleapis.com/css2?family=Archivo:ital,wght@0,100..900;1,100..900&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,100..1000;1,9..40,100..1000&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Archivo+Black&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Outfit:wght@100..900&display=swap");
+
+@mixin breakpoint($size) {
+  @media (min-width: $size) {
+    @content;
+  }
+}
+
+$primary-color: #00b67a;
+$primary-hover-color: #00a86b;
+$secondary-color: #010101;
+$tertiary-color: #f5f5f5;
+$body-bg: #fff;
+$secondary-bg-color: #000;
+$black-color: #000;
+$white-color: #fff;
+$primary-text-color: #000;
+$secondary-text-color: #fff;
+$tertiary-text-color: #050b20;
+$light-text-color: #5e5e5e;
+$link-text-color: #f8fafc;
+$sash-color: #3d923a;
+$heading-color: #000;
+$secondary-heading-color: #393c3d;
+$hint-color: #757575;
+$filter-text-color: #353944;
+$link-color: #518ecb;
+$hover-color: #e1e1e1;
+$border-color: #757575;
+$input-field-text-color: #494949;
+$error-color: #ff0000;
+$transparent-color: transparent;
+$transparent-hover-color: rgba(0, 0, 0, 0.1);
+$transparent-hover-color-dark: rgba(0, 0, 0, 0.4);
+$border-color-secondary: #ddd;
+$dropdown-bg-color: #f9f9f9;
+$dropdown-hover-bg-color: #e9e9e9;
+$tertiary-border-color: #e5e5e5;
+$dark-text-hover-color: #4d4d4d;
+$dark-button-hover-color: #101010;
+$button-icons-color: #626262;
+$blue-color: #405ff2;
+$label-light-color: #818181;
+$white-gray-color: #c2c2c2;
+$container-light-bg-color: #f8f8f8;
+$active-color: #e0e0e0;
+$admin-bg-color: #e5e7eb;
+$active-status-color: #00b69b;
+$inactive-color: #fd5454;
+$purple-button-color: #5f84ed;
+$secondary-border-color: #eee;
+
+$archivo-font: "Archivo", sans-serif;
+$dm-sans-font: "DM Sans", sans-serif;
+$inter-font: "Inter", sans-serif;
+$archivo-black-font: "Archivo Black", sans-serif;
+$lato-font: "Lato", sans-serif;
+$outfit-font: "Outfit", sans-serif;
+
+$normal-font-weight: 400;
+$bold-font-weight: 700;
+$extra-bold-font-weight: 800;
+$light-font-weight: 300;
+$extra-light-font-weight: 200;
+$medium-font-weight: 500;
+$semi-bold-font-weight: 600;
+$thin-font-weight: 100;
+$very-extra-bold-font-weight: 900;
+
+$font-size-base: 16px;
+$font-size-lg: 18px;
+$font-size-xl: 20px;
+$font-size-xxl: 24px;
+$font-size-xxxl: 30px;
+$font-size-sm: 14px;
+$font-size-xs: 12px;
+$font-size-xxs: 10px;
+$sash-font-size: 11.752px;
+$filter-font-size: 15px;
+$headings-font-size: 24px;
+$headings-font-size-lg: 30px;
+$headings-font-size-xl: 36px;
+$headings-font-size-xxl: 42px;
+$headings-font-size-xxxl: 48px;
+$headings-font-size-52: 52px;
+$headings-font-size-sm: 20px;
+$headings-font-size-xs: 18px;
+
+$font-style-normal: normal;
+$font-style-italic: italic;
+$font-style-oblique: oblique;
+$font-style-bold: bold;
+
+$normal-line-height: normal;
+
+$small-screen: 576px;
+$medium-screen: 768px;
+$large-screen: 1024px;
+$extra-large-screen: 1200px;
